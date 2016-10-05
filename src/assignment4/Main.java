@@ -68,7 +68,11 @@ public class Main {
 
         /* Do not alter the code above for your submission. */
         /* Write your code below. */
-        
+        try{
+        	Critter.makeCritter("Craig");
+        }catch(InvalidCritterException e){
+        	
+        }
         System.out.println("GLHF");
         
         /* Write your code above */
