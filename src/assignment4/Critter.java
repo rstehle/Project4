@@ -51,6 +51,8 @@ public abstract class Critter {
 	private int y_coord;
 	
 	protected final void walk(int direction) {
+		//random%8 to pick direction
+		//update location of critter, subtract walk energy
 	}
 	
 	protected final void run(int direction) {
@@ -186,6 +188,10 @@ public abstract class Critter {
 	}
 	
 	public static void worldTimeStep() {
+		//listiterator to go through
+		//call doTimeStep on each critter, subtract rest_energy
+		//if critter energy<0, remove from list
+		
 	}
 	
 	public static void displayWorld() {
