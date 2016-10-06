@@ -182,10 +182,41 @@ public abstract class Critter {
 	 * Clear the world of all critters, dead and alive
 	 */
 	public static void clearWorld() {
+		
 	}
 	
 	public static void worldTimeStep() {
 	}
 	
-	public static void displayWorld() {}
+	public static void displayWorld() {
+		System.out.print("+");
+		for(int printDash = 0; printDash<Params.world_width; printDash++){
+			System.out.print("-");
+		}
+		System.out.println("+");
+		
+		for(int printCols = 0; printCols < Params.world_height; printCols++){
+			System.out.print("|");
+			rowLoop:
+			for(int printRows = 0; printRows < Params.world_width; printRows++){
+				for(int checkCrittersIndex = 0; checkCrittersIndex < population.size(); checkCrittersIndex++){
+					if(population.get(checkCrittersIndex).x_coord == printCols && population.get(checkCrittersIndex).y_coord == printRows){
+						System.out.print(population.get(checkCrittersIndex).toString());
+						continue rowLoop;
+					}
+				}
+				System.out.print(" ");
+			}
+			System.out.println("|");
+		}
+		
+		System.out.print("+");
+		for(int printDash = 0; printDash<Params.world_width; printDash++){
+			System.out.print("-");
+		}
+		System.out.print("+");
+		
+		
+		
+	}
 }

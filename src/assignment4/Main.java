@@ -73,6 +73,7 @@ public class Main {
         }catch(InvalidCritterException e){
         	
         }
+        Critter.displayWorld();
         System.out.println("GLHF");
         
         /* Write your code above */

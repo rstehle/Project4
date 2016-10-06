@@ -19,6 +19,8 @@ public class Craig extends Critter {
 		dir = Critter.getRandomInt(8);
 	}
 	
+	
+	
 	public boolean fight(String not_used) { return true; }
 
 	@Override
